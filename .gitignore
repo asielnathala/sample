@@ -1,6 +1,0 @@
-
----
-```gitignore
-*.class
-*.log
-target/
