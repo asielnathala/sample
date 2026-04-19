@@ -19,6 +19,14 @@ pipeline {
             }
         }
 
+        stage('Docker Build') {
+            steps {
+                script {
+                    sh 'docker --version'
+                    sh 'docker build -t hello-java25:latest .'
+                }
+            }
+        }
         stage('Run') {
             steps {
                 sh 'java -cp target/hello-java25-1.0-SNAPSHOT.jar com.example.App'
